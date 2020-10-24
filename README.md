@@ -9,7 +9,7 @@ Spring Cloud Alibaba 学习，学习各个组件的使用
 ```
 spring-cloud-alibaba-parent
 │ |- 父项目
-├─nacos-discovery [博客](http://huan1993.iteye.com/blog/2423631)
+├─nacos-discovery [博客](https://blog.csdn.net/fu_huo_1993/article/details/109257707)
 │ |- 注册中心
 │ │- user-consumer-9091
 | |		 >> 1、只作为服务消费者,不注册 nacos 上
