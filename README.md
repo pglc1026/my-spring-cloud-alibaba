@@ -32,6 +32,16 @@ spring-cloud-alibaba-parent
 │ │					** spring.cloud.nacos.discovery.group
 │ │    >> 5、配置集群，默认值是 DEFAULT
 │ │					** spring.cloud.nacos.discovery.cluster-name
+├─nacos-ribbon
+│ |- nacos 整合ribbon，默认就整合了ribbon
+│ │- user-consumer-9091
+| |		 >> 1、自定义负载均衡策略，使之整合nacos的权重 
+│ │					** NacosWeightRule
+│ │    >> 2、需要注意 Spring 的父子上下文，否则很容易导致为某个服务配置的规则导致应用到全部的微服务上。
+│ │- user-provider-9092
+│ │- user-provider-9093
+│ │    >> 1、配置微服务权重
+│ │         ** spring.cloud.nacos.discovery.weight 1-100，值越大，权重越大
 
 
 ```
