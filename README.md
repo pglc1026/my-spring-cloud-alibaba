@@ -42,6 +42,14 @@ spring-cloud-alibaba-parent
 │ │- user-provider-9093
 │ │    >> 1、配置微服务权重
 │ │         ** spring.cloud.nacos.discovery.weight 1-100，值越大，权重越大
+├─sentinel
+│ |- nacos 整合 sentinel
+│ │- user-consumer-9099
+| |		 >> 1、整合 sentinel 配置 sentinel dashboard 的 url 和 通讯端口 
+| |		 >> 2、整合 Feign
+| |		 >> 3、整合 RestTemplate
+│ │- user-provider-9097
+│ │- user-provider-9098
 
 
 ```
