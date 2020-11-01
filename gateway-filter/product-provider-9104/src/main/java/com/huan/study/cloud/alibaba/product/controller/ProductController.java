@@ -1,14 +1,12 @@
 package com.huan.study.cloud.alibaba.product.controller;
 
+import com.google.common.collect.Lists;
 import com.huan.study.cloud.alibaba.product.entity.Product;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.Collection;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 /**
  * @author huan.fu 2020/10/23 - 14:23
@@ -36,8 +34,12 @@ public class ProductController {
     public Product findOne(@RequestParam("id") Integer id,
                            @RequestParam(value = "username", required = false) String username,
                            HttpServletRequest request) {
-        String token = request.getHeader("x-token");
-        log.info("获取id:[{}]的商品,x-token:[{}],username:[{}]", id, token, username);
+        Enumeration<String> headers = request.getHeaders("x-token");
+        List<String> xTokens = Lists.newArrayList();
+        while (headers.hasMoreElements()) {
+            xTokens.add(headers.nextElement());
+        }
+        log.info("获取id:[{}]的商品,x-token:[{}],username:[{}]", id, xTokens, username);
         return PRODUCT_MAP.get(id);
     }
 
