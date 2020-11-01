@@ -30,7 +30,7 @@ public class ProductController {
         return PRODUCT_MAP.values();
     }
 
-    @GetMapping("findOne")
+    @RequestMapping(value = "findOne", method = {RequestMethod.GET, RequestMethod.POST})
     public Product findOne(@RequestParam("id") Integer id,
                            @RequestParam(value = "username", required = false) String username,
                            HttpServletRequest request) {
