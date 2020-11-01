@@ -72,6 +72,7 @@ spring-cloud-alibaba-parent
 │ │    6、配置 默认拦截器，对所有的路由都会生效，spring.cloud.gateway.default-filters:......
 │ │    7、配置 全局过滤器，所有的路由都生效，全局过滤器有顺序，需要实现 GlobalFilter 和 Ordered 接口
 │ │    8、实现一个 全局过滤器 CustomGlobalFilter
+│ │    9、实现一个 GatewayFilter TokenGatewayFilterFactory
 │ │- product-provider-9104
 │ │- user-consumer-9105
 
