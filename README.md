@@ -52,7 +52,7 @@ spring-cloud-alibaba-parent
 │ │- user-provider-9097
 │ │- user-provider-9098
 ├─gateway [博客]()
-│ |- Spring Cloud Gateway 的一些用法
+│ |- Spring Cloud Gateway route predicate factory的一些用法
 │ │- gateway-9102
 │ │    1、gateway 的一些基本用法│
 │ │    2、spring.cloud.gateway.enabled 用来配置是否启动网关
@@ -61,6 +61,19 @@ spring-cloud-alibaba-parent
 │ │    5、自己编写一个 Route Predicate Factory(git commitid b70f2598)
 │ │- product-provider-9101
 │ │- user-consumer-9100
+├─gateway-filter [博客]()
+│ |- Spring Cloud Gateway filter 的一些用法
+│ │- gateway-9103
+│ │    1、gateway filter 的一些基本用法
+│ │    2、实现修改 RequestBody 
+│ │    3、StripPrefix 可以去掉路由匹配的前缀
+│ │    4、PrefixPath 可以为下游服务增加一个前缀
+│ │    5、uri 使用 lb://xxx 时，默认使用的阻塞的 ribbon LoadBalancerClient,推荐使用 ReactiveLoadBalancerClientFilter，开启方法设置 spring.cloud.loadbalancer.ribbon.enabled = false
+│ │    6、配置 默认拦截器，对所有的路由都会生效，spring.cloud.gateway.default-filters:......
+│ │    7、配置 全局过滤器，所有的路由都生效，全局过滤器有顺序，需要实现 GlobalFilter 和 Ordered 接口
+│ │    8、实现一个 全局过滤器 CustomGlobalFilter
+│ │- product-provider-9104
+│ │- user-consumer-9105
 
 
 ```
