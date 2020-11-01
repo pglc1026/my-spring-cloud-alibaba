@@ -13,12 +13,6 @@ spring:
           predicates:
             - Path=/product/findOne
           filters:
-            - AddRequestHeader=x-token,xxxxx
-        - id: product-provider-02
-          uri: lb://product-provider
-          predicates:
-            - Path=/product/findOne/{productId}
-          filters:
-            - AddRequestHeader=x-token,xxxxx-{productId}
+            - AddRequestParameter=username,zhangsan
 server:
   port: 9103

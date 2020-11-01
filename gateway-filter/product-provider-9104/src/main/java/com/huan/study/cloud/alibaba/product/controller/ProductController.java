@@ -33,9 +33,11 @@ public class ProductController {
     }
 
     @GetMapping("findOne")
-    public Product findOne(@RequestParam("id") Integer id, HttpServletRequest request) {
+    public Product findOne(@RequestParam("id") Integer id,
+                           @RequestParam(value = "username", required = false) String username,
+                           HttpServletRequest request) {
         String token = request.getHeader("x-token");
-        log.info("获取id:[{}]的商品,x-token:[{}]", id, token);
+        log.info("获取id:[{}]的商品,x-token:[{}],username:[{}]", id, token, username);
         return PRODUCT_MAP.get(id);
     }
 
