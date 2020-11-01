@@ -51,6 +51,15 @@ spring-cloud-alibaba-parent
 | |		 >> 4、生产环境使用 sentinel https://github.com/alibaba/Sentinel/wiki/%E5%9C%A8%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83%E4%B8%AD%E4%BD%BF%E7%94%A8-Sentinel
 │ │- user-provider-9097
 │ │- user-provider-9098
+├─gateway [博客]()
+│ |- Spring Cloud Gateway 的一些用法
+│ │- gateway-9102
+│ │    1、gateway 的一些基本用法│
+│ │    2、spring.cloud.gateway.enabled 用来配置是否启动网关
+│ │    3、spring.cloud.gateway.routes[index].uri=[http|lb] lb表示负载均衡的地址 eg: lb:service-name
+│ │    4、route predicate factory 的使用
+│ │- product-provider-9101
+│ │- user-consumer-9100
 
 
 ```
