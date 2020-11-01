@@ -49,4 +49,10 @@ public class ProductController {
         log.info("获取productId:[{}]的商品,x-token:[{}]", productId, token);
         return PRODUCT_MAP.get(productId);
     }
+
+    @PostMapping("modifyRequestBody")
+    public String modifyRequestBody(@RequestBody String body) {
+        log.info("此处获取到的值，是经过网关修改之后的");
+        return body;
+    }
 }
