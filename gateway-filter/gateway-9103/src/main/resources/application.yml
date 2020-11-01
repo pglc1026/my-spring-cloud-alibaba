@@ -15,5 +15,8 @@ spring:
       default-filters:
         - AddResponseHeader=X-Response-Default-Red, Default-Blue
         - AddRequestHeader=x-token,xxxxx
+    loadbalancer:
+      ribbon:
+        enabled: false
 server:
   port: 9103
