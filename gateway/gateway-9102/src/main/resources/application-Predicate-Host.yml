@@ -18,5 +18,9 @@ spring:
 #        locator:
 #          enabled: true
 
+#  1、`**.gateway.com`：表示请求中的`Host`的值需要配置这种`ant`风格
+#  2、`{study}.baidu.com`：`study`这个模版变量可以在`GatewayFilter`中获取到，
+#  通过`ServerWebExchange.getAttributes().get(ServerWebExchangeUtils.URI_TEMPLATE_VARIABLES_ATTRIBUTE)`获取
+
 server:
   port: 9102
