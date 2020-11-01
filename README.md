@@ -58,6 +58,7 @@ spring-cloud-alibaba-parent
 │ │    2、spring.cloud.gateway.enabled 用来配置是否启动网关
 │ │    3、spring.cloud.gateway.routes[index].uri=[http|lb] lb表示负载均衡的地址 eg: lb:service-name
 │ │    4、route predicate factory 的使用
+│ │    5、自己编写一个 Route Predicate Factory(git commitid b70f2598)
 │ │- product-provider-9101
 │ │- user-consumer-9100
 
