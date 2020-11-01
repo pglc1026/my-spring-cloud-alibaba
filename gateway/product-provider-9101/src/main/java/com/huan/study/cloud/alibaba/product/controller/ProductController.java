@@ -2,10 +2,7 @@ package com.huan.study.cloud.alibaba.product.controller;
 
 import com.huan.study.cloud.alibaba.product.entity.Product;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
 import java.util.Date;
@@ -38,5 +35,11 @@ public class ProductController {
     public Product findOne(@RequestParam("id") Integer id) {
         log.info("获取id:[{}]的商品.", id);
         return PRODUCT_MAP.get(id);
+    }
+
+    @GetMapping("findOne/{productId}")
+    public Product findOneProduct(@PathVariable("productId") Integer productId) {
+        log.info("获取productId:[{}]的商品.", productId);
+        return PRODUCT_MAP.get(productId);
     }
 }
