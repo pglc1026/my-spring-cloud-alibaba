@@ -11,7 +11,7 @@ spring:
         - id: product-provider # 名字唯一即可
           uri: lb://product-provider
           predicates:
-            - Method=GET,POST,PUT
+            - Method=GET,POST,PUT # 匹配get、post、put请求
       # true : 表示启用 gateway，默认就是 true
       enabled: true
 #      discovery:
