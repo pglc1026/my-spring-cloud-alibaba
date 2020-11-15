@@ -74,6 +74,8 @@ spring-cloud-alibaba-parent
 │ │    8、实现一个 全局过滤器 CustomGlobalFilter
 │ │    9、实现一个 GatewayFilter TokenGatewayFilterFactory
 │ │    10、获取当前路由，获取过滤器执行顺序 参考 GetCurrentRouteAndSortGatewayFilterFactory
+│ │    11、指定网关全局和局部的超时时间
+│ │    12、处理网关异常。GatewayExceptionHandler
 │ │- product-provider-9104
 │ │- user-consumer-9105
 
