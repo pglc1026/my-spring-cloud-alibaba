@@ -49,6 +49,8 @@ spring-cloud-alibaba-parent
 | |		 >> 2、整合 Feign
 | |		 >> 3、整合 RestTemplate
 | |		 >> 4、生产环境使用 sentinel https://github.com/alibaba/Sentinel/wiki/%E5%9C%A8%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83%E4%B8%AD%E4%BD%BF%E7%94%A8-Sentinel
+│ │- product-provider-9098
+| |		 >> 1、自定义 BlockExceptionHandler ，实现降级或限流时返回一个默认值
 │ │- user-provider-9097
 │ │- user-provider-9098
 ├─gateway [博客](https://blog.csdn.net/fu_huo_1993/article/details/109405439)
