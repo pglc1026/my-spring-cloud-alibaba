@@ -79,6 +79,17 @@ spring-cloud-alibaba-parent
 │ │    13、输出调试日志。
 │ │- product-provider-9104
 │ │- user-consumer-9105
+├─nacos-config [博客]()
+│ |- Spring Cloud Alibaba Nacos Config 的一些用法
+│ │- product-provider-9200
+│ │    1、如何确定加载一个配置文件
+│ │    2、配置的刷新
+│ │    3、实现加载多个配置文件
+│ │    4、加载的顺序
+│ │    5、nacos config 配置相关的内容需要放置在 bootstrap.yml 配置文件中
+│ │    6、@RefreshScope在定时任务中的坑
+│ │    7、@Value配置的值在线程中的坑
+│ │    8、最好不要出现优先级上的配置
 
 
 ```
