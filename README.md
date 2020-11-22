@@ -79,7 +79,7 @@ spring-cloud-alibaba-parent
 │ │    13、输出调试日志。
 │ │- product-provider-9104
 │ │- user-consumer-9105
-├─nacos-config [博客]()
+├─nacos-config [博客](https://blog.csdn.net/fu_huo_1993/article/details/109923909)
 │ |- Spring Cloud Alibaba Nacos Config 的一些用法
 │ │- product-provider-9200
 │ │    1、如何确定加载一个配置文件
