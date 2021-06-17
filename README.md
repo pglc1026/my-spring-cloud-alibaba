@@ -92,6 +92,9 @@ spring-cloud-alibaba-parent
 │ │    6、@RefreshScope在定时任务中的坑
 │ │    7、@Value配置的值在线程中的坑
 │ │    8、最好不要出现优先级上的配置
+├─gateway-dynamic-refresh-route [博客]()
+│ │- gateway-9201
+│ │    1、完成网关配置的自动刷新，不需要额外的配置，只需要 Spring Cloud Alibaba Nacos Config 和 Spring Cloud Gateway 整合，网关配置放到 nacos 上即可实现。
 
 
 ```
