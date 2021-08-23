@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: user-provider
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8847
+        register-enabled: true
+    compatibility-verifier:
+      # 取消SpringCloud SpringCloudAlibaba SpringBoot 等的版本检查
+      enabled: false
+
+server:
+  port: 9202
