@@ -16,6 +16,8 @@
 
     <modules>
         <module>authorization-server-prod</module>
+        <module>gateway</module>
+        <module>user-provider</module>
     </modules>
 
     <!-- https://github.com/alibaba/spring-cloud-alibaba/wiki/版本说明 -->
