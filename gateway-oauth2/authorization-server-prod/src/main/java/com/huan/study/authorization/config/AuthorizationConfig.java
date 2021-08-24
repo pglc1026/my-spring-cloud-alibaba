@@ -242,7 +242,7 @@ public class AuthorizationConfig {
     @Bean
     public JWKSource<SecurityContext> jwkSource() throws NoSuchAlgorithmException {
         // 加载证书 读取类路径文件
-        Resource resource = new FileSystemResource("/Users/huan/code/study/idea/spring-cloud-parent/security/new-authoriza-server.jks");
+        Resource resource = new FileSystemResource("/Users/huan/code/study/idea/spring-cloud-alibaba-parent/gateway-oauth2/new-authoriza-server.jks");
         // 创建秘钥工厂(加载读取证书数据)
         KeyStoreKeyFactory keyStoreKeyFactory = new KeyStoreKeyFactory(resource, "123456".toCharArray());
         // 读取秘钥对(公钥、私钥)
