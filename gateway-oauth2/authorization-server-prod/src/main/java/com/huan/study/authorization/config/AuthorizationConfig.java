@@ -66,6 +66,7 @@ public class AuthorizationConfig {
         public void customize(JwtEncodingContext context) {
             // 添加一个自定义头
             context.getHeaders().header("client-id", context.getRegisteredClient().getClientId());
+            context.getHeaders().header("authorization-grant-type", context.getAuthorizationGrantType().getValue());
         }
     }
 
@@ -290,8 +291,7 @@ public class AuthorizationConfig {
     public ProviderSettings providerSettings() {
         return ProviderSettings.builder()
                 // 发布者的url地址,一般是本系统访问的根路径
-                // 此处的 qq.com 需要修改我们系统的 host 文件
-                .issuer("http://localhost:9201")
+                .issuer("http://localhost:9203/auth")
                 .build();
     }
 }

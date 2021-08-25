@@ -81,6 +81,17 @@ spring-cloud-alibaba-parent
 │ │    13、输出调试日志。
 │ │- product-provider-9104
 │ │- user-consumer-9105
+├─gateway-oauth2
+│ |- Spring Cloud Gateway 整合 Oauth2 实现认证操作
+│ │- authorization-server-prod
+│ │    1、认证服务器，具体搭建参考 https://blog.csdn.net/fu_huo_1993/article/details/118798160?spm=1001.2014.3001.5501
+│ │- user-provider
+│ │    1、用户服务，对外提供一个 获取所有用户的接口
+│ │    1、获取网关服务传递下来的token信息，也可以传递具体的认证数据
+│ │- gateway
+│ │    1、实现网关的认证
+│ │    2、向下游服务的请求头中传递解码后的token数据
+│ │    3、整合 oauth2 资源服务器，实现验证权限操作
 ├─nacos-config [博客](https://blog.csdn.net/fu_huo_1993/article/details/109923909)
 │ |- Spring Cloud Alibaba Nacos Config 的一些用法
 │ │- product-provider-9200
