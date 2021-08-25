@@ -81,7 +81,7 @@ spring-cloud-alibaba-parent
 │ │    13、输出调试日志。
 │ │- product-provider-9104
 │ │- user-consumer-9105
-├─gateway-oauth2
+├─gateway-oauth2 [博客](https://blog.csdn.net/fu_huo_1993/article/details/119914696?spm=1001.2014.3001.5501)
 │ |- Spring Cloud Gateway 整合 Oauth2 实现认证操作
 │ │- authorization-server-prod
 │ │    1、认证服务器，具体搭建参考 https://blog.csdn.net/fu_huo_1993/article/details/118798160?spm=1001.2014.3001.5501
