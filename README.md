@@ -20,6 +20,15 @@ spring-cloud-alibaba-parent
 │ │         ** spring.cloud.nacos.discovery.service=服务名
 │ │    >> 4、集成ribbon
 │ │    			** ribbon.nacos.enabled=true  true=集成,false=不集成
+│ │    >> 5、从nacos上移除改服务
+│ │    			@Autowired
+│ │             private NacosServiceManager nacosServiceManager;
+│ │             @Autowired
+│ │             private NacosDiscoveryProperties nacosDiscoveryProperties;
+│ │
+│ │             # 修改nacos上这个服务的健康状态为不健康，此时该服务还是可以对外提供服务的。
+│ │             nacosServiceManager.nacosServiceShutDown()
+│ │
 │ │- user-provider-9092
 │ │- user-provider-9093
 │ │    >> 1、服务提供者，注册到 nacos 上。
