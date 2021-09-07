@@ -103,7 +103,7 @@ spring-cloud-alibaba-parent
 │ │    1、实现网关的认证
 │ │    2、向下游服务的请求头中传递解码后的token数据
 │ │    3、整合 oauth2 资源服务器，实现验证权限操作
-├─gateway-redis-limiter [博客](https://gitee.com/huan1993/spring-cloud-alibaba-parent/tree/master/gateway-redis-limiter)
+├─gateway-redis-limiter [博客](https://blog.csdn.net/fu_huo_1993/article/details/120155756?spm=1001.2014.3001.5501)
 │ │- gateway
 │ │    1、实现网关限流
 │ │    2、实现限流后，返回自定义的响应码给客户端
