@@ -70,6 +70,8 @@ spring-cloud-alibaba-parent
 │ │    3、spring.cloud.gateway.routes[index].uri=[http|lb] lb表示负载均衡的地址 eg: lb:service-name
 │ │    4、route predicate factory 的使用
 │ │    5、自己编写一个 Route Predicate Factory(git commitid b70f2598)
+│ │- gateway-error-9103
+│ │    1、网关层面的异常处理
 │ │- product-provider-9101
 │ │- user-consumer-9100
 ├─gateway-filter [博客](https://blog.csdn.net/fu_huo_1993/article/details/109427564)
@@ -101,6 +103,13 @@ spring-cloud-alibaba-parent
 │ │    1、实现网关的认证
 │ │    2、向下游服务的请求头中传递解码后的token数据
 │ │    3、整合 oauth2 资源服务器，实现验证权限操作
+├─gateway-redis-limiter [博客](https://gitee.com/huan1993/spring-cloud-alibaba-parent/tree/master/gateway-redis-limiter)
+│ │- gateway
+│ │    1、实现网关限流
+│ │    2、实现限流后，返回自定义的响应码给客户端
+│ │    3、实现自定义的限流key
+│ │    4、实现自定义的限流算法
+│ │    5、RequestRateLimiter 过滤器只能使用 name,args的方式来配置
 ├─nacos-config [博客](https://blog.csdn.net/fu_huo_1993/article/details/109923909)
 │ |- Spring Cloud Alibaba Nacos Config 的一些用法
 │ │- product-provider-9200

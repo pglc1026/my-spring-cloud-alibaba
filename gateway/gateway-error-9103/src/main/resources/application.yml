@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: gateway
+  cloud:
+    nacos:
+      discovery:
+        # 配置 nacos 的服务地址
+        server-addr: localhost:8847
+    gateway:
+      routes:
+        - id: product-provider
+          uri: lb://product-provider
+          predicates:
+            - Path=/p/**
+          filters:
+            - RewritePath=/p(?<segment>/?.*), $\{segment}
+#      default-filters:
+#        - ErrorFilter
+server:
+  port: 9103

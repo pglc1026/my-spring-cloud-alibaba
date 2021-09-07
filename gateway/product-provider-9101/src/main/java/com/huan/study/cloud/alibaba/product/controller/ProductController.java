@@ -15,6 +15,7 @@ import java.util.Map;
 @RestController
 @Slf4j
 @RequestMapping("product")
+@RestControllerAdvice
 public class ProductController {
 
     private static final Map<Integer, Product> PRODUCT_MAP = new HashMap<>(16);
@@ -41,5 +42,11 @@ public class ProductController {
     public Product findOneProduct(@PathVariable("productId") Integer productId) {
         log.info("获取productId:[{}]的商品.", productId);
         return PRODUCT_MAP.get(productId);
+    }
+
+    @ExceptionHandler(Exception.class)
+    public void aa(Exception e) throws Exception {
+        System.err.println("发生异常了:"+e.getMessage());
+        throw e;
     }
 }

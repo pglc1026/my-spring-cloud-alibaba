@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: gateway-9205
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8847
+    gateway:
+      routes:
+        - id: user-provider-9206
+          uri: lb://user-provider-9206
+          predicates:
+            - Path=/user/**
+          filters:
+            - RewritePath=/user(?<segment>/?.*), $\{segment}
+            - name: RequestRateLimiter
+              args:
+                key-resolver: "#{@defaultGatewayKeyResolver}"
+                # 如果返回的key是空的话，则不进行限流
+                deny-empty-key: false
+                # 每秒产生多少个令牌
+                redis-rate-limiter.replenishRate: 1
+                # 1秒内最大的令牌，即在1s内可以允许的突发流程，设置为0，表示阻止所有的请求
+                redis-rate-limiter.burstCapacity: 1
+                # 每次请求申请几个令牌
+                redis-rate-limiter.requestedTokens: 1
+  redis:
+    host: 192.168.7.1
+    database: 12
+    port: 6379
+    password: 123456
+
+server:
+  port: 9205
+debug: true

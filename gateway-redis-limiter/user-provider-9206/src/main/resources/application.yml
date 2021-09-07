@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: user-provider-9206
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8847
+        register-enabled: true
+
+server:
+  port: 9206
