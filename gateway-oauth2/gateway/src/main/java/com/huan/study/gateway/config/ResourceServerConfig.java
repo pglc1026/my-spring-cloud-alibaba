@@ -54,7 +54,7 @@ public class ResourceServerConfig {
                 // 还没有认证时发生认证异常，比如token过期，token不合法
                 .authenticationEntryPoint(new CustomServerAuthenticationEntryPoint())
                 // 将一个字符串token转换成一个认证对象
-                .bearerTokenConverter(new ServerBearerTokenAuthenticationConverter())
+                .bearerTokenConverter(new CustomServerBearerTokenAuthenticationConverter())
                     .and()
         .authorizeExchange()
                 // 所有以 /auth/** 开头的请求全部放行
