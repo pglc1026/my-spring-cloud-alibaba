@@ -1,5 +1,6 @@
 package com.huan.study.gateway.config;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.io.buffer.DataBuffer;
 import org.springframework.core.io.buffer.DataBufferUtils;
 import org.springframework.http.HttpStatus;
@@ -15,10 +16,11 @@ import java.nio.charset.StandardCharsets;
  *
  * @author huan.fu 2021/8/25 - 下午1:10
  */
+@Slf4j
 public class CustomServerAuthenticationEntryPoint implements ServerAuthenticationEntryPoint {
     @Override
     public Mono<Void> commence(ServerWebExchange exchange, AuthenticationException ex) {
-
+        log.error("发生了认证异常", ex);
         return Mono.defer(() -> Mono.just(exchange.getResponse()))
                 .flatMap(response -> {
                     response.setStatusCode(HttpStatus.UNAUTHORIZED);

@@ -1,7 +1,6 @@
 package com.huan.study.gateway.config;
 
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.context.annotation.Bean;
 import org.springframework.core.io.buffer.DataBuffer;
 import org.springframework.core.io.buffer.DataBufferUtils;
 import org.springframework.http.HttpStatus;
@@ -21,12 +20,13 @@ import java.nio.charset.StandardCharsets;
  */
 @Slf4j
 public class CustomServerAccessDeniedHandler implements ServerAccessDeniedHandler {
-
+    
     @Override
     public Mono<Void> handle(ServerWebExchange exchange, AccessDeniedException denied) {
-
+        
+        log.error("无权限访问:", denied);
         ServerHttpRequest request = exchange.getRequest();
-
+        
         return exchange.getPrincipal()
                 .doOnNext(principal -> log.info("用户:[{}]没有访问:[{}]的权限.", principal.getName(), request.getURI()))
                 .flatMap(principal -> {
