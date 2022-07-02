@@ -130,7 +130,11 @@ spring-cloud-alibaba-parent
 
 
 
+#### 微信公众号
 
+`更多内容请关注微信公众号`
+
+![更多内容请关注微信公众号](./images/微信公众号.jpg)
 
 
 
